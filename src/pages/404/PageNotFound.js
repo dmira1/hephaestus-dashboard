@@ -7,7 +7,7 @@ function PageNotFound(props) {
             <ul>
                 <li><Link to="/"></Link>Login Page</li>
                 <li><Link to="/dashboard">Dashboard</Link></li>
-                <li><Link to="/PageNotFound">404 Page</Link></li>
+                <li><Link to="/*">404 Page</Link></li>
             </ul>
         </>
     );
