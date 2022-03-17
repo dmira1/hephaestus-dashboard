@@ -1,14 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
+
+import {signOut} from 'firebase/auth';
+import {auth} from 'libs/firebase';
+
 import {MdSpaceDashboard, MdDesktopWindows, MdContacts} from 'react-icons/md'
 import {HiDesktopComputer} from 'react-icons/hi'
-import {IoDesktop, IoCube, IoBuild, IoLogoWebComponent, IoInformationCircle, IoLogOutOutline} from 'react-icons/io5'
+import {IoCube, IoBuild, IoLogoWebComponent, IoInformationCircle, IoLogOutOutline} from 'react-icons/io5'
 import {GiComputerFan, GiLightningArc} from 'react-icons/gi';
-import {IconButton, IconLabel} from '../../ui/buttons'
 
+import {IconButton, IconLabel} from '../../ui/buttons'
 import {SideBarStyles, SideBarItems, SideBarItemGroup, SideBarItem} from './styles'
 
 function SideBar(props) {
+    function onLogoutRequest(e){
+        signOut(auth)
+    }
+
     return (
         <SideBarStyles>
             <SideBarItems>
@@ -23,10 +31,12 @@ function SideBar(props) {
                     <SideBarItem>
                         <IconButton>
                             <HiDesktopComputer size="1.5rem"/>
-                            <IconLabel>Budget Grade</IconLabel>
+                            <IconLabel><Link to="/dashboard">All Products</Link></IconLabel>
                         </IconButton>
-                        <IconButton><MdDesktopWindows size="1.5rem"/>Middle Grade</IconButton>
-                        <IconButton><IoDesktop size="1.5rem"/>Enthusiast Grade</IconButton>
+                        <IconButton>
+                            <MdDesktopWindows size="1.5rem"/>
+                            <IconLabel><Link to="add">Add Products</Link></IconLabel>
+                        </IconButton>
                     </SideBarItem>
                 </SideBarItemGroup>
 
@@ -49,7 +59,7 @@ function SideBar(props) {
 
                 <SideBarItemGroup>
                     <SideBarItem>
-                        <Link to="/"><IconButton><IoLogOutOutline size="1.5rem"/>Sign Out</IconButton></Link>
+                        <Link to="/"><IconButton onClick={onLogoutRequest}><IoLogOutOutline size="1.5rem"/>Sign Out</IconButton></Link>
                     </SideBarItem>
                 </SideBarItemGroup>
             </SideBarItems>

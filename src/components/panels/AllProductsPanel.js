@@ -1,14 +1,12 @@
 import React from 'react';
 import {PanelStyles, PanelHeading, PanelContent, ProductContainer, Product} from './styles'
 
-function Panels(props) {
+function AllProductsPanel(props) {
     return (
         <PanelStyles>
-            <PanelHeading>Product Listing</PanelHeading>
+            <PanelHeading>All Products</PanelHeading>
             <PanelContent>
                 <ProductContainer>
-                    <Product></Product>
-                    <Product></Product>
                     <Product></Product>
                 </ProductContainer>
             </PanelContent>
@@ -16,4 +14,4 @@ function Panels(props) {
     );
 }
 
-export default Panels;
+export default AllProductsPanel;

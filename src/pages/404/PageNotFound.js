@@ -1,14 +1,36 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from 'react-router-dom'
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from 'libs/firebase';
+import {AppBar} from '../../components/appbar'
+import {PageNotFoundStyles, PageHeader, PageImage} from './styles'
+import logo from '../../static/404-image.png'
 
 function PageNotFound(props) {
+    const [isUser, setIsUser] = useState(false)
+    
+    onAuthStateChanged(auth, (user)=>{
+        if(user){
+            setIsUser(true)
+        }else{
+            setIsUser(false)
+        }
+    })
     return (
         <>
-            <ul>
-                <li><Link to="/"></Link>Login Page</li>
-                <li><Link to="/dashboard">Dashboard</Link></li>
-                <li><Link to="/*">404 Page</Link></li>
-            </ul>
+            <AppBar/>
+            <PageNotFoundStyles>
+                <header>
+                    <PageImage src={logo} alt="404 Image"/>
+                    <PageHeader>Well, this is embarassing.</PageHeader>
+                    <p>Looks like that page doesn't exist.</p>
+                </header>
+                <>
+                    {
+                        isUser? <Link to="/dashboard">Return to Dashboard</Link> : <Link to="/">Return</Link>
+                    }
+                </>
+            </PageNotFoundStyles>
         </>
     );
 }

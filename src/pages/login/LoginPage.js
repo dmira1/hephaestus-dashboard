@@ -5,12 +5,12 @@ import 'react-toastify/dist/ReactToastify.css'
 
 import {useNavigate} from 'react-router-dom';
 import { auth } from '../../libs/firebase';
-
+import image from '../../static/hephaestus-login-bg.jpg'
 
 import {IoPerson} from 'react-icons/io5'
 import {GiAnvilImpact} from 'react-icons/gi'
 
-import {LoginFormStyles, FormControl} from './styles'
+import {LoginFormStyles, Form, FormControl, LoginBackground, WelcomeMessageContainer, WelcomeMessage, LoginContainer} from './styles'
 import {Label} from "../../ui/label";
 import {Input} from "../../ui/input";
 import {SubmitButton} from "../../ui/buttons";
@@ -24,7 +24,7 @@ function LoginPage(props) {
     
     const notify = (error) => toast.error(error.code, {
         position: "bottom-center",
-        autoClose: 5000,
+        autoClose: 1800,
         hideProgressBar: true,
         closeOnClick: true,
         pauseOnHover: true,
@@ -37,6 +37,7 @@ function LoginPage(props) {
         signInWithEmailAndPassword(auth, email, password)
         .then(userCredential=>{
             navigation('/dashboard')
+            
         })
         .catch(error=>{
             notify(error)
@@ -46,31 +47,32 @@ function LoginPage(props) {
     return (
         <LoginFormStyles>
             <ToastContainer/>
-            <div className='loginForm'>
-                {/* <GiAnvilImpact size="2rem"/> */}
-                <h2><IoPerson/> Sign-In</h2>
-                <form onSubmit={onLoginRequest}>
-                    <FormControl>
-                        <Label htmlFor="email">Email</Label>
-                        <Input id="email" type="text" placeholder="janedoe@webmail.com"
-                            onChange={(e) => setEmail(e.target.value)}/>
-                    </FormControl>
+            <LoginBackground>
+                <LoginContainer>
+                    <Form onSubmit={onLoginRequest}>
+                        <h2><IoPerson/> Sign-In</h2>
+                        <FormControl>
+                            <Label htmlFor="email">Email</Label>
+                            <Input id="email" type="text" placeholder="janedoe@webmail.com"
+                                onChange={(e) => setEmail(e.target.value)}/>
+                        </FormControl>
 
-                    <FormControl>
-                        <Label htmlFor="password">Password</Label>
-                        <Input id="password" type="password"
-                        onChange={(e) => setPassword(e.target.value)}/>
-                    </FormControl>
-                    <FormControl>
-                        <SubmitButton type="submit" padding="0.8rem 0" margin="1.5rem 0 0 0" bgcolor="slateblue">Dashboard Sign In</SubmitButton>
-                    </FormControl>
-                </form>
-            </div>
-
-            <div className='loginWelcome'>
-                <h1>Flame-forged Custom PC and Parts</h1>
-                <p>Curated for you and delivered to your door.</p>
-            </div>
+                        <FormControl>
+                            <Label htmlFor="password">Password</Label>
+                            <Input id="password" type="password"
+                            onChange={(e) => setPassword(e.target.value)}/>
+                        </FormControl>
+                        <FormControl>
+                            <SubmitButton type="submit" padding="0.8rem 0" margin="1.5rem 0 0 0" bgcolor="red">Dashboard Sign In</SubmitButton>
+                        </FormControl>
+                    </Form>
+                    <WelcomeMessageContainer>
+                        <GiAnvilImpact size={100}/>
+                        <WelcomeMessage>Flame-forged Custom PC and Parts</WelcomeMessage>
+                        <p>Curated for you and delivered to your door.</p>
+                    </WelcomeMessageContainer>
+                </LoginContainer>
+            </LoginBackground>
         </LoginFormStyles>
     );
 }

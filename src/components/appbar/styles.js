@@ -5,6 +5,7 @@ const AppBarStyles = styled.nav`
     padding: 0.3125rem 1rem;
     color: white;
     background: rgba(139,0,0,1);
+    z-index: 1;
 `;
 
 const AppBarItems = styled.ul`
