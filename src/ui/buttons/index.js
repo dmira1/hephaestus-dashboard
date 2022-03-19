@@ -20,6 +20,9 @@ const IconButton = styled.button`
     display: flex;
     gap: 1rem;
     color: white;
+    :hover {
+        text-decoration: underline;
+    }
 `;
 
 const IconLabel = styled.p`

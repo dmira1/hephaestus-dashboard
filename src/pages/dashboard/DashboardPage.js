@@ -1,16 +1,12 @@
 import React, {useState} from 'react';
-import {useNavigate} from 'react-router-dom'
+import {Outlet, useNavigate} from 'react-router-dom'
 
 import { onAuthStateChanged } from 'firebase/auth'
 import {auth} from 'libs/firebase'
 
 import {AppBar} from '../../components/appbar'
 import {SideBar} from '../../components/sidebar';
-import {AllProductsPanel, AddProductsPanel} from 'components/panels';
-import {Panels} from 'components/panels'
 import { DashboardPageStyles } from './styles';
-import '../../styles/DashboardStyles.scss'
-
 
 function DashboardPage(props) {
     const [isUser, setIsUser] = useState(false)
@@ -32,7 +28,7 @@ function DashboardPage(props) {
                 <div className='dashboardContents'>
                 <DashboardPageStyles>
                     <SideBar/>
-                    <AllProductsPanel/>
+                    <Outlet/>
                 </DashboardPageStyles>
                 </div>
             </>

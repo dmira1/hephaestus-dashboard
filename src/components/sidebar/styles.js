@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const SideBarStyles = styled.nav`
-    width: 20vw;
+    
     height: 100vh;
     background: rgba(139,0,0,1);
     box-shadow: 2px 0 4px -2px grey;

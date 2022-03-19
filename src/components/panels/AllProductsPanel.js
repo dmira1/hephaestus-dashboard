@@ -4,7 +4,9 @@ import {PanelStyles, PanelHeading, PanelContent, ProductContainer, Product} from
 function AllProductsPanel(props) {
     return (
         <PanelStyles>
-            <PanelHeading>All Products</PanelHeading>
+            <PanelHeading>
+                <h2>All Products</h2>
+            </PanelHeading>
             <PanelContent>
                 <ProductContainer>
                     <Product></Product>
