@@ -5,7 +5,6 @@ import 'react-toastify/dist/ReactToastify.css'
 
 import {useNavigate} from 'react-router-dom';
 import { auth } from '../../libs/firebase';
-import image from '../../static/hephaestus-login-bg.jpg'
 
 import {IoPerson} from 'react-icons/io5'
 import {GiAnvilImpact} from 'react-icons/gi'
