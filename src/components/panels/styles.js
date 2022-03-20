@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 const PanelStyles = styled.section`
-    flex:1;
+    flex: 1;
     height: 100vh;
     background: rgba(255,255,255,1);
-    margin: 1.5rem;
+    padding: 1rem;
 `;
 
 const PanelHeading = styled.header`
@@ -19,7 +19,7 @@ const PanelHeading = styled.header`
 `;
 
 const PanelContent = styled.div`
-    margin: ${props => props.margin || "3rem"};
+    margin: ${props => props.margin || "0rem"};
 `;
 
 const ProductContainer = styled.ul`
@@ -29,5 +29,6 @@ const ProductContainer = styled.ul`
 const Product = styled.li`
 
 `;
+
 
 export {PanelStyles, PanelHeading, PanelContent, ProductContainer, Product}

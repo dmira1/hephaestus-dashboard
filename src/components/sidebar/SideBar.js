@@ -9,7 +9,7 @@ import {IoLogOutOutline} from 'react-icons/io5'
 import ProductOptions from './ProductOptions';
 
 import {IconButton, IconLabel} from '../../ui/buttons'
-import {SideBarStyles, SideBarItems, SideBarItemGroup, SideBarItem} from './styles'
+import {SideBarStyles, SideBarItemGroup, SideBarItem} from './styles'
 
 function SideBar(props) {
     function onLogoutRequest(e){
@@ -18,7 +18,6 @@ function SideBar(props) {
 
     return (
         <SideBarStyles>
-            <SideBarItems>
                 <SideBarItemGroup>
                     <IconButton>
                         <MdSpaceDashboard size="1.5rem"/>
@@ -26,16 +25,13 @@ function SideBar(props) {
                     </IconButton>
                 </SideBarItemGroup>
 
-                <SideBarItemGroup>
-                    <ProductOptions/>
-                </SideBarItemGroup>
+                <ProductOptions/>
 
                 <SideBarItemGroup>
                     <SideBarItem>
                         <Link to="/"><IconButton onClick={onLogoutRequest}><IoLogOutOutline size="1.5rem"/>Sign Out</IconButton></Link>
                     </SideBarItem>
                 </SideBarItemGroup>
-            </SideBarItems>
         </SideBarStyles>
     );
 }

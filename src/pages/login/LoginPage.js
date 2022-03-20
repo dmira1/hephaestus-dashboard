@@ -10,8 +10,8 @@ import {IoPerson} from 'react-icons/io5'
 import {GiAnvilImpact} from 'react-icons/gi'
 
 import {LoginFormStyles, Form, FormControl, LoginBackground, WelcomeMessageContainer, WelcomeMessage, LoginContainer} from './styles'
-import {Label} from "ui/label";
-import {Input} from "ui/input";
+import {Label} from "ui/forms/label";
+import {Input} from "ui/forms/input";
 import {SubmitButton} from "../../ui/buttons";
 
 

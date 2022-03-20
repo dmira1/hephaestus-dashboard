@@ -8,7 +8,7 @@ const ProductEditorStyles  = styled.aside`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
+    gap: 1.5rem;
 `;
 
 export {ProductEditorStyles}

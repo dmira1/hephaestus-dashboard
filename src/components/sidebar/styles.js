@@ -1,22 +1,16 @@
 import styled from 'styled-components';
 
-const SideBarStyles = styled.nav`
-    
+const SideBarStyles = styled.section`
     height: 100vh;
-    background: rgba(139,0,0,1);
-    box-shadow: 2px 0 4px -2px grey;
+    background: rgba(130,0,0,1);
 `;
 
-const SideBarItems = styled.ul`
-`;
-
-const SideBarItemGroup = styled.li`
-    border-bottom: 1px solid grey;
-    gap: 0.5rem;
+const SideBarItemGroup = styled.ul`
+    width: 20vw;
     padding: 0.5rem 0;
 `;
 
 const SideBarItem = styled.li`
 `;
 
-export {SideBarStyles, SideBarItems, SideBarItemGroup, SideBarItem}
+export {SideBarStyles, SideBarItemGroup, SideBarItem}

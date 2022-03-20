@@ -1,19 +1,19 @@
 import React from 'react';
 import {PanelStyles, PanelHeading, PanelContent} from './styles';
-import {AddProduct} from '../products/widgets/AddProduct';
+import {EditProduct} from '../products/widgets/EditProduct';
 
-function AddProductPanel({title, ...props}) {
+function EditProductPanel({title, ...props}) {
     
     return ( 
         <PanelStyles>
             <PanelHeading>
-                <h2>{title="Add Product" || "Display Panel"}</h2>
+                <h2>{title="Edit Product" || "Display Panel"}</h2>
             </PanelHeading>
             <PanelContent>
-                <AddProduct/>
+                <EditProduct/>
             </PanelContent>
         </PanelStyles>
     );
 }
 
-export default AddProductPanel;
+export default EditProductPanel;

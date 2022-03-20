@@ -14,7 +14,7 @@ function ProductImageDropBox  ({setProductImage, ...props}){
         isFocused,
         isDragAccept,
         isDragReject,
-      } = useDropzone({ accept: 'image/jpeg,image/jpg,image/png', maxFiles:1, onDrop });
+      } = useDropzone({ accept: 'image/jpeg,image/jpg,image/png,image/webp', maxFiles:1, onDrop });
 
 
       

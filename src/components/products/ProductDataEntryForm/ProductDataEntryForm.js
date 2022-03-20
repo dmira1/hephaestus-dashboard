@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {ProductDataEntryFormStyles, ProductImage, ProductName, ProductPrice, ProductDescription} from './styles';
-import {Label, Input} from 'ui/forms';
+import {Label, Input, TextArea} from 'ui/forms';
 import {ProductImageDropBox} from '../ProductImageDropBox';
 
 function ProductDataEntryForm ({children, handleProductName, handleProductPrice, setProductImage, handleProductDescription, ...props})  {
@@ -26,7 +26,7 @@ function ProductDataEntryForm ({children, handleProductName, handleProductPrice,
 
           <ProductDescription>
             <Label>Product Description</Label>
-            <textarea onChange={(e)=>handleProductDescription(e.target.value.trim())} rows={6} cols={48}/>
+            <TextArea onChange={(e)=>handleProductDescription(e.target.value.trim())} rows={6} cols={48}/>
           </ProductDescription>
         </ProductDataEntryFormStyles>
   )

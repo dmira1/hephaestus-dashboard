@@ -1,6 +1,6 @@
 import {Routes, Route} from 'react-router-dom';
 import {DashboardPage, LoginPage, PageNotFoundPage} from './pages';
-import {AddProductPanel, AllProductsPanel} from 'components/panels';
+import {AddProductPanel, AllProductsPanel, EditProductPanel} from 'components/panels';
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
         <Route path="dashboard" element={<DashboardPage/>}>
           <Route index element={<AllProductsPanel/>}/>
           <Route path="add" element={<AddProductPanel/>}/>
+          <Route path="edit" element={<EditProductPanel/>}/>
         </Route>
         <Route path="*" element={<PageNotFoundPage/>}/>
       </Routes>

@@ -6,6 +6,7 @@ import {HiDesktopComputer} from 'react-icons/hi';
 import {MdDesktopWindows} from 'react-icons/md';
 import {GiComputerFan, GiLightningArc} from 'react-icons/gi';
 import {IoCube, IoLogoWebComponent} from 'react-icons/io5';
+import {FaWrench} from 'react-icons/fa'
 
 import {IconButton} from '../../ui/buttons';
 
@@ -34,6 +35,9 @@ function ProductOptions(props) {
             </li>
             <li>
                 <Link to="add"><IconButton><MdDesktopWindows size="1.5rem"/>Add Product</IconButton></Link>
+            </li>
+            <li>
+                <Link to="edit"><IconButton><FaWrench size="1.5rem"/>Edit Product</IconButton></Link>
             </li>
         </ProductOptionStyles>
     );
