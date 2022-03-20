@@ -20,10 +20,18 @@ function ProductOptions(props) {
             <li>
                 <Link to="/dashboard"><IconButton><HiDesktopComputer size="1.5rem"/>All Products</IconButton></Link>
             </li>
-            <IconButton><IoCube size="1.5rem"/>Chassis</IconButton>
-            <IconButton><GiComputerFan size="1.5rem"/>Cooling</IconButton>
-            <IconButton><IoLogoWebComponent size="1.5rem"/>Other Components</IconButton>
-            <IconButton><GiLightningArc size="1.5rem"/>Lighting</IconButton>
+            <li>
+                <IconButton><IoCube size="1.5rem"/>Chassis</IconButton>
+            </li>
+            <li>
+                <IconButton><GiComputerFan size="1.5rem"/>Cooling</IconButton>
+            </li>
+            <li>
+                <IconButton><IoLogoWebComponent size="1.5rem"/>Other Components</IconButton>
+            </li>
+            <li>
+                <IconButton><GiLightningArc size="1.5rem"/>Lighting</IconButton>
+            </li>
             <li>
                 <Link to="add"><IconButton><MdDesktopWindows size="1.5rem"/>Add Product</IconButton></Link>
             </li>

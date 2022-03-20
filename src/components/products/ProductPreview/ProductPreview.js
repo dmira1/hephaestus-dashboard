@@ -1,13 +1,16 @@
 import React from 'react';
 
-import {ProductPreviewStyles} from './styles'
+import {ProductPreviewStyles, ProductDescription, ProductImage, ProductName, ProductPrice} from './styles'
 
-function ProductPreview ({children, ...props})  {
+function ProductPreview ({children, productName, productPrice, productImage, productDescription, ...props})  {
   return (
         <ProductPreviewStyles  {...props}>
-           <h2>ProductPreview Component</h2>
-           {children}
-
+          <ProductImage>
+            <img src={productImage} alt="Best" width="320" height="184"/>
+          </ProductImage>
+          <ProductName>{productName}</ProductName>
+          <ProductPrice>${productPrice}</ProductPrice>
+          <ProductDescription>{productDescription}</ProductDescription>
         </ProductPreviewStyles>
   )
 }

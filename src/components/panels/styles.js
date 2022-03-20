@@ -18,7 +18,7 @@ const PanelHeading = styled.header`
     }
 `;
 
-const PanelContent = styled.p`
+const PanelContent = styled.div`
     margin: ${props => props.margin || "3rem"};
 `;
 

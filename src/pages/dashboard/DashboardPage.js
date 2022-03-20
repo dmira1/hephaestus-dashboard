@@ -25,12 +25,10 @@ function DashboardPage(props) {
         return ( 
             <>
                 <AppBar/>
-                <div className='dashboardContents'>
                 <DashboardPageStyles>
                     <SideBar/>
                     <Outlet/>
                 </DashboardPageStyles>
-                </div>
             </>
         );
     }else{

@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 const Input = styled.input`
     width: ${props => props.width || "100%"};
     border:${props => props.border || "none"};;
@@ -18,5 +17,5 @@ const Input = styled.input`
     }
 `;
 
-export{Input} ;
+export default Input;
 

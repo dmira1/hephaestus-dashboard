@@ -6,7 +6,7 @@ import {auth} from 'libs/firebase';
 import {MdSpaceDashboard} from 'react-icons/md'
 import {IoLogOutOutline} from 'react-icons/io5'
 
-/* import {ProductOptions} from './ProductOptions'; */
+import ProductOptions from './ProductOptions';
 
 import {IconButton, IconLabel} from '../../ui/buttons'
 import {SideBarStyles, SideBarItems, SideBarItemGroup, SideBarItem} from './styles'
@@ -27,7 +27,7 @@ function SideBar(props) {
                 </SideBarItemGroup>
 
                 <SideBarItemGroup>
-                    {/* <ProductOptions/> */}
+                    <ProductOptions/>
                 </SideBarItemGroup>
 
                 <SideBarItemGroup>
