@@ -14,10 +14,10 @@ const defaults={
 
 function AddProduct ({children, ...props})  {
   const [isWriting, setIsWriting] = useState(false)
-  const [productImage, setProductImage] = useState({previewImage:ProductPreview, file:null})
   const [productName, setProductName] = useState(defaults.name)
   const [productPrice, setProductPrice] = useState(defaults.price)
   const [productDescription, setProductDescription] = useState(defaults.description)
+  const [productImage, setProductImage] = useState({previewImage:ProductPreview, file:null})
   const [loading, productLoader] = useAddNewProduct();
   const formatter = useNumberFormat()
   function handleProductName (name){

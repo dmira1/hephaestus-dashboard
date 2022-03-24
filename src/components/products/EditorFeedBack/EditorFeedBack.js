@@ -1,6 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+
 import {AiOutlineCloudUpload, AiOutlineCheckCircle} from 'react-icons/ai'
+
 import {EditorFeedBackStyles, FeedBackMessage, FeedBack, FeedBackOption} from './styles'
 import {Button} from "ui/buttons"
 
@@ -29,12 +31,13 @@ function EditorFeedBack ({children, status, writeCompleted, ...props})  {
           <FeedBackOption>
             <Button bc="#B01B1B" 
                     color="white" 
-                    onClick={()=>writeCompleted(false)}
+                    onClick={()=> writeCompleted(false)}
                     disabled={status}
                     >Add Another Product</Button>
             <Button bc="#B01B1B" 
                     color="white"
-                    onClick={()=> navigator('/dashboard')}>View All Products</Button>
+                    onClick={()=> navigator('/dashboard')}
+                    >View All Products</Button>
           </FeedBackOption>
         </EditorFeedBackStyles>
   )
