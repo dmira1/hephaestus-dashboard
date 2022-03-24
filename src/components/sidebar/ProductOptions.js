@@ -28,7 +28,7 @@ function ProductOptions(props) {
                 <IconButton><GiComputerFan size="1.5rem"/>Cooling</IconButton>
             </li>
             <li>
-                <IconButton><IoLogoWebComponent size="1.5rem"/>Other Components</IconButton>
+                <IconButton><IoLogoWebComponent size="1.5rem"/>Other Parts</IconButton>
             </li>
             <li>
                 <IconButton><GiLightningArc size="1.5rem"/>Lighting</IconButton>

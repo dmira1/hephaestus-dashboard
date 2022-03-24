@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 const AppBarStyles = styled.nav`
     width: 100vw;
-    padding: 0.3125rem 1rem;
+    position: relative;
     color: white;
+    padding: 0.5rem;
     background: rgba(139,0,0,1);
     z-index: 1;
 `;
@@ -12,15 +13,17 @@ const AppBarItems = styled.ul`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 54px;
+`;
+
+const AppBarItem = styled.li`
+
 `;
 
 const AppBarItemGroup = styled.li`
     display: flex;
     gap: 0.25rem;
     align-items: center;
-`;
-
+`
 
 const AppBarTitle = styled.h1`
     font-weight: 600;
@@ -28,4 +31,4 @@ const AppBarTitle = styled.h1`
 `;
 
 
-export {AppBarStyles, AppBarItems, AppBarItemGroup, AppBarTitle}
+export {AppBarStyles, AppBarItems, AppBarItem, AppBarItemGroup, AppBarTitle}

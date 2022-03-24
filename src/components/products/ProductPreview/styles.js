@@ -36,5 +36,6 @@ const ProductPrice = styled.p`
 const ProductDescription = styled.p`
     font-size: 13px;
     color: #94a3b8;
+    word-wrap: break-word;
 `
 export {ProductPreviewStyles, ProductDescription, ProductName, ProductPrice, ProductImage}

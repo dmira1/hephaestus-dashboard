@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-
-
 const ProductEditorStyles  = styled.aside`
     width: fit-content;
     margin: 0 auto;

@@ -2,7 +2,7 @@ import React from 'react';
 import {GiAnvilImpact} from 'react-icons/gi'
 import {IoPersonOutline, IoSettingsOutline, IoCartOutline, IoMailOutline} from 'react-icons/io5'
 import {IconButton} from '../../ui/buttons'
-import {AppBarStyles, AppBarItems, AppBarItemGroup, AppBarTitle} from './styles'
+import {AppBarStyles, AppBarItems, AppBarItem, AppBarItemGroup, AppBarTitle} from './styles'
 
 function AppBar(props) {
     return (
@@ -13,18 +13,26 @@ function AppBar(props) {
                     <AppBarTitle>Hephaestus PC</AppBarTitle>
                 </AppBarItemGroup>
                 <AppBarItemGroup>
-                    <IconButton>
-                        <IoMailOutline size="1.5rem" color='white'/>
-                    </IconButton>
-                    <IconButton>
-                        <IoPersonOutline size="1.5rem" color='white'/>
-                    </IconButton>
-                    <IconButton>
-                        <IoCartOutline size="1.5rem" color='white'/>
-                    </IconButton>
-                    <IconButton>
-                        <IoSettingsOutline size="1.5rem" color='white'/>
-                    </IconButton>
+                    <AppBarItem>
+                        <IconButton>
+                            <IoMailOutline size="1.5rem" color='white'/>
+                        </IconButton>
+                    </AppBarItem>
+                    <AppBarItem>
+                        <IconButton>
+                            <IoPersonOutline size="1.5rem" color='white'/>
+                        </IconButton>
+                    </AppBarItem>
+                    <AppBarItem>
+                        <IconButton>
+                            <IoCartOutline size="1.5rem" color='white'/>
+                        </IconButton>
+                    </AppBarItem>
+                    <AppBarItem>
+                        <IconButton>
+                            <IoSettingsOutline size="1.5rem" color='white'/>
+                        </IconButton>
+                    </AppBarItem>
                 </AppBarItemGroup>
             </AppBarItems>
         </AppBarStyles>

@@ -1,14 +1,14 @@
 import React from 'react';
-import {PanelStyles, PanelHeading, PanelContent} from './styles';
+import {PanelStyles, PanelHeader, PanelContent} from './styles';
 import {EditProduct} from '../products/widgets/EditProduct';
 
 function EditProductPanel({title, ...props}) {
     
     return ( 
         <PanelStyles>
-            <PanelHeading>
+            <PanelHeader>
                 <h2>{title="Edit Product" || "Display Panel"}</h2>
-            </PanelHeading>
+            </PanelHeader>
             <PanelContent>
                 <EditProduct/>
             </PanelContent>

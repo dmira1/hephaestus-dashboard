@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-
-
 const ProductDataEntryFormStyles  = styled.form`
     width: 360px;
     input:focus, textarea:focus {

@@ -2,24 +2,26 @@ import styled from 'styled-components';
 
 const PanelStyles = styled.section`
     flex: 1;
-    height: 100vh;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.3);
     background: rgba(255,255,255,1);
-    padding: 1rem;
+    border-radius: 3px;
+    margin: 1.5rem;
 `;
 
-const PanelHeading = styled.header`
+const PanelHeader = styled.header`
     h2 {
-        background-color: #f8f8f8;
+        background-color: #A3A3A3;
         padding: 0.5rem;
         border-radius: 3px;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
         color: #3f3f3f;
+        font-weight: 700;
     }
 `;
 
 const PanelContent = styled.div`
-    margin: ${props => props.margin || "0rem"};
+    margin: ${props => props.margin || "2rem"};
 `;
 
 const ProductContainer = styled.ul`
@@ -31,4 +33,4 @@ const Product = styled.li`
 `;
 
 
-export {PanelStyles, PanelHeading, PanelContent, ProductContainer, Product}
+export {PanelStyles, PanelHeader, PanelContent, ProductContainer, Product}

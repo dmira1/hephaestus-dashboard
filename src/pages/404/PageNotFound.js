@@ -23,6 +23,7 @@ function PageNotFound(props) {
                 <header>
                     <PageImage src={logo} alt="404 Image"/>
                     <PageHeader>Well, this is embarassing.</PageHeader>
+                    <p>Error Code: 404</p>
                     <p>Looks like that page doesn't exist.</p>
                 </header>
                 <>

@@ -18,7 +18,7 @@ const IconButton = styled.button`
     width: 100%;
     padding: 1rem;
     display: flex;
-    gap: 1rem;
+    gap: 0.75rem;
     color: white;
     :hover {
         text-decoration: underline;
@@ -30,7 +30,7 @@ const IconLabel = styled.p`
 `;
 
 const SubmitButton = styled(Button)`
-    background-color: ${props => props.bgcolor || '#2563eb'};
+    background-color: ${props => props.bgcolor || '#B01B1B'};
     color: ${props => props.color || '#f8fafc'}; 
     font-weight: ${props => props.fw || '700'}; 
     font-size: ${props => props.fs || '14px'};

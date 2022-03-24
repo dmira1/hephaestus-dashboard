@@ -5,7 +5,7 @@ import {ProductImageDropBoxStyles} from './styles';
 function ProductImageDropBox  ({setProductImage, ...props}){
     const onDrop = useCallback(acceptedFiles => {
         const path = acceptedFiles[0] ;
-        setProductImage(URL.createObjectURL(path))
+        setProductImage({previewImage:URL.createObjectURL(path), file:acceptedFiles[0]})
       }, [])
       const {
         getRootProps,
@@ -16,8 +16,6 @@ function ProductImageDropBox  ({setProductImage, ...props}){
         isDragReject,
       } = useDropzone({ accept: 'image/jpeg,image/jpg,image/png,image/webp', maxFiles:1, onDrop });
 
-
-      
     function workingThing(){
       console.log("look")
     }
