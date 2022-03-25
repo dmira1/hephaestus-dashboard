@@ -16,7 +16,9 @@ const AppBarItems = styled.ul`
 `;
 
 const AppBarItem = styled.li`
-
+    :last-of-type {
+        margin-right: 1rem;
+    }
 `;
 
 const AppBarItemGroup = styled.li`
