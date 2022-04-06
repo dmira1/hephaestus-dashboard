@@ -1,4 +1,4 @@
-# Hephaestus PC React Firebase Login Flow
+# Hephaestus PC React Firebase Product Display
 
 ## Login Page
 Login connects to Dashboard via the login button. Authenticates the user to log in. User login information is stored in the company database.
