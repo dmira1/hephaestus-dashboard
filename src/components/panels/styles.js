@@ -5,7 +5,7 @@ const PanelStyles = styled.section`
     box-shadow: 0 0 2px 0 rgba(0,0,0,0.3);
     background: rgba(255,255,255,1);
     border-radius: 3px;
-    margin: 1.5rem;
+    margin: 1rem;
 `;
 
 const PanelHeader = styled.header`
@@ -22,15 +22,15 @@ const PanelHeader = styled.header`
 
 const PanelContent = styled.div`
     margin: ${props => props.margin || "2rem"};
-`;
+`
 
-const ProductContainer = styled.ul`
+const PanelContentAll = styled.div`
+    margin: ${props => props.margin || "0.5rem"};
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+`
 
-`;
-
-const Product = styled.li`
-
-`;
 
 
-export {PanelStyles, PanelHeader, PanelContent, ProductContainer, Product}
+export {PanelStyles, PanelHeader, PanelContent, PanelContentAll}

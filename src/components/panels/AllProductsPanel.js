@@ -1,17 +1,21 @@
-import React from 'react';
-import {PanelStyles, PanelHeader, PanelContent, ProductContainer, Product} from './styles'
 
-function AllProductsPanel(props) {
+import {PanelStyles, PanelHeader, PanelContentAll} from './styles'
+import { useGetProducts } from 'hooks/useGetProducts';
+import { ProductCard } from 'components/products/ProductCard';
+
+function AllProductsPanel({title, ...props}) {
+    const productData = useGetProducts('products')
     return (
         <PanelStyles>
             <PanelHeader>
-                <h2>All Products</h2>
+                <h2>{title || "All Products"}</h2>
             </PanelHeader>
-            <PanelContent>
-                <ProductContainer>
-                    <Product></Product>
-                </ProductContainer>
-            </PanelContent>
+            <PanelContentAll>
+            {
+            productData? productData.map(product=><ProductCard key={product.uid} product={product}/>)
+            : <p>Spinner React Spinners</p>
+            }
+            </PanelContentAll>
         </PanelStyles>
     );
 }

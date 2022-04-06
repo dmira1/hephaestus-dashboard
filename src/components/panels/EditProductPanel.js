@@ -7,7 +7,7 @@ function EditProductPanel({title, ...props}) {
     return ( 
         <PanelStyles>
             <PanelHeader>
-                <h2>{title="Edit Product" || "Display Panel"}</h2>
+                <h2>{title || "Edit Products"}</h2>
             </PanelHeader>
             <PanelContent>
                 <EditProduct/>

@@ -7,7 +7,7 @@ function AddProductPanel({title, ...props}) {
     return ( 
         <PanelStyles>
             <PanelHeader>
-                <h2>{title="Add Product" || "Display Panel"}</h2>
+                <h2>{title || "Add Product"}</h2>
             </PanelHeader>
             <PanelContent>
                 <AddProduct/>
